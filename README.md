@@ -1,3 +1,6 @@
+## Version de node
+v16.15.0
+
 ## Clonar el repositorio
 git clone https://github.com/CadenaCristian/restaurant.git
 
