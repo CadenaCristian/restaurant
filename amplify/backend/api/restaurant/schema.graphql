@@ -1,0 +1,23 @@
+# This "input" configures a global authorization rule to enable public access to
+# all models in this schema. Learn more about authorization rules here: https://docs.amplify.aws/cli/graphql/authorization-rules
+input AMPLIFY { globalAuthRule: AuthRule = { allow: public } } # FOR TESTING ONLY!
+
+type Species @model {
+  id: ID!
+  name: String!
+  recipies: [Recipe] @manyToMany(relationName: "SpeciesRecipe")
+}
+
+type Recipe @model {
+  id: ID!
+  name: String!
+  species: [Species] @manyToMany(relationName: "SpeciesRecipe")
+  restaurant: [Restaurant] @manyToMany(relationName: "RecipeRestaurant")
+}
+
+type Restaurant @model {
+  id: ID!
+  name: String!
+  recipie: [Recipe] @manyToMany(relationName: "RecipeRestaurant")
+}
+
