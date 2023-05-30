@@ -7,9 +7,6 @@ git clone https://github.com/CadenaCristian/restaurant.git
 ## Acceder al repositorio
 cd restaurant
 
-## Cambiar de rama
-git checkout master
-
 ## Instalar dependencias
 npm install
 
